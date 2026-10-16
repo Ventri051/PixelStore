@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PixelStore.DragonDetailPage"
+    Title="Dragon Legends">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Image Source="dragon.png"
+                   HeightRequest="200"
+                   Aspect="AspectFit" />
+
+            <Label Text="Dragon Legends"
+                   FontSize="28"
+                   FontAttributes="Bold" />
+
+            <Label Text="$29.99"
+                   FontSize="22" />
+
+            <Label Text="Out of Stock"
+                   TextColor="Red" />
+
+            <Label Text="Fight dragons and explore a fantasy world." />
+
+            <Entry x:Name="quantityEntry"
+                   Placeholder="Enter quantity"
+                   Keyboard="Numeric" />
+
+            <Button Text="Add to Cart"
+                    IsEnabled="False"
+                    Clicked="OnAddToCartClicked" />
+
+            <Label x:Name="messageLabel" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

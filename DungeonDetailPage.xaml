@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PixelStore.DungeonDetailPage"
+    Title="Dungeon Explorer">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Image Source="dungeon.png"
+                   HeightRequest="200"
+                   Aspect="AspectFit" />
+
+            <Label Text="Dungeon Explorer"
+                   FontSize="28"
+                   FontAttributes="Bold" />
+
+            <Label Text="$14.99"
+                   FontSize="22" />
+
+            <Label Text="In Stock"
+                   TextColor="Green" />
+
+            <Label Text="Explore dangerous dungeons and collect treasure." />
+
+            <Entry x:Name="quantityEntry"
+                   Placeholder="Enter quantity"
+                   Keyboard="Numeric" />
+
+            <Button Text="Add to Cart"
+                    Clicked="OnAddToCartClicked" />
+
+            <Label x:Name="messageLabel" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

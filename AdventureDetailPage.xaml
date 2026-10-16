@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PixelStore.AdventureDetailPage"
+    Title="Adventure Quest">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Image Source="adventure.png"
+                   HeightRequest="200"
+                   Aspect="AspectFit" />
+
+            <Label Text="Adventure Quest"
+                   FontSize="28"
+                   FontAttributes="Bold" />
+
+            <Label Text="$19.99"
+                   FontSize="22" />
+
+            <Label Text="In Stock"
+                   TextColor="Green" />
+
+            <Label Text="Explore dungeons and fight monsters." />
+
+            <Entry x:Name="quantityEntry"
+                   Placeholder="Enter quantity"
+                   Keyboard="Numeric" />
+
+            <Button Text="Add to Cart"
+                    Clicked="OnAddToCartClicked" />
+
+            <Label x:Name="messageLabel" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
