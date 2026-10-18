@@ -14,7 +14,11 @@ public partial class SpaceDetailPage : ContentPage
 
         if (valid && quantity > 0)
         {
-            messageLabel.Text = "Added to cart!";
+            Cart.Names.Add("Space Survivor");
+            Cart.Quantities.Add(quantity);
+            Cart.Prices.Add(24.99);
+
+            messageLabel.Text = $"Added {quantity} x Space Survivor";
             messageLabel.TextColor = Colors.MediumSpringGreen;
         }
         else

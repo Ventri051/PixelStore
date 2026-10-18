@@ -9,6 +9,19 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

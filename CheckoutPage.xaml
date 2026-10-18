@@ -1,29 +1,47 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
+    
+    <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="PixelStore.CheckoutPage"
     Title="Checkout">
 
-    <Grid Padding="20" RowDefinitions="Auto,*,Auto,Auto" RowSpacing="20">
+    <Grid Padding="20" RowDefinitions="Auto,*,Auto,Auto,Auto" RowSpacing="20">
 
         <Label Grid.Row="0"
                Text="Checkout"
                FontSize="30"
                FontAttributes="Bold" />
 
-        <Label Grid.Row="1"
-               Text="Your cart is empty."
-               VerticalOptions="Center"
-               HorizontalOptions="Center" />
+        <Grid Grid.Row="1">
+            <CollectionView x:Name="cartList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}"
+                               FontSize="18"
+                               Padding="10" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label x:Name="emptyLabel"
+                   Text="Your cart is empty."
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+        </Grid>
 
         <Label Grid.Row="2"
+               x:Name="totalLabel"
                Text="Total: $0.00"
                FontSize="24"
                FontAttributes="Bold" />
 
         <Button Grid.Row="3"
-                Text="Checkout" />
+                Text="Checkout"
+                Clicked="OnCheckoutClicked" />
+
+        <Label Grid.Row="4"
+               x:Name="checkoutMessage" />
 
     </Grid>
 </ContentPage>

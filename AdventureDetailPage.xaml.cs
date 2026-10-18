@@ -14,7 +14,11 @@ public partial class AdventureDetailPage : ContentPage
 
         if (valid && quantity > 0)
         {
-            messageLabel.Text = "Added to cart!";
+            Cart.Names.Add("Adventure Quest");
+            Cart.Quantities.Add(quantity);
+            Cart.Prices.Add(19.99);
+
+            messageLabel.Text = $"Added {quantity} x Adventure Quest";
             messageLabel.TextColor = Colors.MediumSpringGreen;
         }
         else

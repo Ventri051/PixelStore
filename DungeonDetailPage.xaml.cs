@@ -14,7 +14,11 @@ public partial class DungeonDetailPage : ContentPage
 
         if (valid && quantity > 0)
         {
-            messageLabel.Text = "Added to cart!";
+            Cart.Names.Add("Dungeon Explorer");
+            Cart.Quantities.Add(quantity);
+            Cart.Prices.Add(14.99);
+
+            messageLabel.Text = $"Added {quantity} x Dungeon Explorer";
             messageLabel.TextColor = Colors.MediumSpringGreen;
         }
         else
